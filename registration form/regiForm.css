@@ -1,0 +1,115 @@
+.regiForm-container {
+    display: grid;
+    place-items: center;
+}
+
+.regi-form {
+    max-width: 500px;
+    width: 100%;
+    box-shadow: var(--box-shadow);
+    padding: 10px 10px 40px 10px;
+    position: relative;
+}
+
+.regi-form input {
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+
+.regi-form label {
+    color: var(--light);
+    font-weight: bolder;
+}
+
+.field {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    width: 80%;
+    margin: 10px auto;
+    column-gap: 20px;
+}
+
+select {
+    width: 40%;
+    border: 2px solid var(--light);
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.event-selectors {
+    display: grid;
+    grid-template-rows: auto auto;
+}
+
+.event-selectors label {
+    display: block;
+}
+
+.event-children {
+    display: grid;
+}
+
+.check-field {
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+}
+
+.event-children label {
+    font-weight: lighter;
+    color: var(--light);
+    font-size: .9rem;
+    display: inline;
+}
+
+.event-children input {
+    cursor: pointer;
+}
+
+.form-submit {
+    font-size: .9rem;
+    border-radius: 5px;
+    position: absolute;
+    right: 20px;
+    bottom: 10px;
+}
+
+
+/* qr overlay */
+
+.parInfo-overlay {
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    place-items: center;
+    z-index: 1000;
+}
+
+.qr-info-container {
+    background-color: var(--light);
+    max-width: 500px;
+    width: 100%;
+    padding: 15px;
+    text-align: center;
+}
+
+.qr-info-container h4 {
+    color: var(--body-bg);
+}
+
+.qr-info-container h5 {
+    color: darkkhaki;
+}
+
+#qr-code-displayer {
+    width: 250px;
+    height: 250px;
+    background-color: white;
+    margin: 10px auto;
+}

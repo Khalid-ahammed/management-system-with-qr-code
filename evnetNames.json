@@ -1,0 +1,7 @@
+[
+    { "title": "Web Design", "id": "webDesign" },
+    { "title": "Programming", "id": "Programming" },
+    { "title": "Robot War", "id": "robotWar" },
+    { "title": "Ballon Buster", "id": "ballonBuster" },
+    { "title": "IT Olympiad", "id": "itOlympiad" }
+]

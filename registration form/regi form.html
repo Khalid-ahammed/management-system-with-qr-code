@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../QR scanner/style.css">
+    <link rel="stylesheet" href="regiForm.css">
+    <title>Registration Form</title>
+</head>
+
+<body>
+    <section class="regiForm-container container">
+        <form id="registrationForm" class="regi-form">
+            <p class="submit-message" style="text-align: center;color: green;font-weight: 500;"></p>
+            <article class="field">
+                <label for="name">Name: </label>
+                <input type="text" placeholder="Enter your name" id="name">
+            </article>
+
+            <article class="field">
+                <label for="institute">Institute: </label>
+                <input type="text" placeholder="Enter your institute name" id="institute">
+            </article>
+
+            <article class="field">
+                <label for="email">email: </label>
+                <input type="email" placeholder="Enter your email id" id="email">
+            </article>
+
+            <article class="field in-class">
+                <label for="name">class: </label>
+                <select name="Class" id="class-selector">
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                </select>
+            </article>
+
+            <article class="field event-selectors">
+                <label for="events">Events you want to participate: </label>
+                <div class="event-children"></div>
+            </article>
+
+            <button class="btn form-submit" id="formBtn">Submit</button>
+        </form>
+    </section>
+    <!-- par infor -->
+    <div class="parInfo-overlay">
+        <div class="qr-info-container">
+            <h4>Your QR code is: </h4>
+            <article id="qr-code-displayer"></article>
+            <span id="code-text" style="color:blanchedalmond"></span>
+            <h5>please keep it secure. It will be needed</h5>
+        </div>
+    </div>
+    <!-- js fiels -->
+    <script src="qrcode.min.js"></script>
+    <script src="regiForm.js"></script>
+</body>
+
+</html>

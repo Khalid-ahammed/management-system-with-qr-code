@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="QR scanner/style.css">
+    <title>Log in</title>
+    <style>
+        .logIn-container {
+            display: grid;
+            place-items: center;
+        }
+        
+        .login-form {
+            display: grid;
+            row-gap: 15px;
+            max-width: 500px;
+            width: 100%;
+            background-color: var(--light);
+            box-shadow: var(--box-shadow);
+            padding: 10px;
+        }
+        
+        .form-message {
+            margin-top: 10px;
+            font-size: .8rem;
+            color: #ff7d7d;
+            text-align: center;
+        }
+        
+        .login-form .field {
+            display: grid;
+            row-gap: 3px;
+            padding: 0 20px;
+            max-width: 80%;
+            margin: 0 auto;
+            width: 100%;
+        }
+        
+        .login-form {
+            font-size: .9rem;
+            color: var(--body-bg);
+            font-style: 500;
+        }
+        
+        .login-form input {
+            padding: 10px;
+            font-size: 1.1rem;
+            border-radius: 5px;
+            color: var(--dark);
+        }
+        
+        #adminSubmit {
+            padding: 10px 15px;
+            display: inline-block;
+            margin: 10px auto;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="logIn-container container">
+        <form id="logInForm" class="login-form">
+            <p class="form-message"></p>
+            <article class="field">
+                <label for="name">Admin Name</label>
+                <input type="text" id="adminName" placeholder="Enter admin name">
+            </article>
+            <article class="field">
+                <label for="password">Password</label>
+                <input type="password" id="addminPass" placeholder="Enter admin password">
+            </article>
+            <button type="submit" id="adminSubmit" class="btn">Enter</button>
+        </form>
+    </section>
+    <!-- js file -->
+    <script src="log In /logIn.js"></script>
+</body>
+
+</html>

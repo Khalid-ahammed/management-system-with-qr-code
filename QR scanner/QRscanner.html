@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <title>QR code Scanner</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- alert -->
+    <article class="alert-container">
+        <p id="alert-message"></p>
+    </article>
+    <!-- header -->
+    <header class="header">
+        <div class="fixed-header container">
+            <div class="user-settings">
+                <div class="user-manual">
+                    <b id="settingTargetedEvent"></b>
+                    <button class="setting-btn" id="display-setting-btn"><i class="fas fa-cog"></i>settings</button>
+                </div>
+                <form id="search-form">
+                    <input type="text" autocomplete="off" placeholder="code or name" id="searchBox" class="search-box">
+                    <button type="submit" class="submit-btn"><i class="fas fa-search"></i></button>
+                    <div class="searched-items"></div>
+                </form>
+                <div class="data-count-info">
+                    <span>All: <b id="all-count"></b></span>
+                    <span id="cur-count"><span></span>: <b></b></span>
+                    <span>Scanned: <b id="scanned-count"></b></span>
+                </div>
+            </div>
+            <div class="scanner-container">
+                <button class="scanner-on btn">Click to start scanning</button>
+                <video id="preview" class="scanner"></video>
+            </div>
+            <div class="scanner-displayer">
+                <h4>Participant's code:<span id="displayer"></span></h4>
+                <h4>Participant's status: <span id="status"></span></h4>
+
+                <div class="per-info">
+                    <div class="per-info-img">
+                        <img src="" alt="">
+                    </div>
+                    <div class="per-details">
+                        <p>Name: <span id="per-name"></span></p>
+                        <p>College: <span id="per-college"></span></p>
+                        <p>Class: <span id="per-class"></span></p>
+                        <p class="events-parent">Target Event: <span id="per-events"></span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header ends -->
+
+    <!-- body starts -->
+    <section class="par-database">
+        <table class="par-info-container">
+            <thead>
+                <tr class="data-header">
+                    <th style="width: 50px;">Serial No.</th>
+                    <th>Participants Name</th>
+                    <th>Institute</th>
+                    <th>Events</th>
+                    <th>Code</th>
+                </tr>
+            </thead>
+            <tbody id="par-info-parent"></tbody>
+        </table>
+    </section>
+    <!-- body ends -->
+
+    <!-- popup setting starts -->
+    <section class="settings-overlay"></section>
+    <!-- popup settings ends -->
+
+    <script type="module" src="app.js"></script>
+</body>
+
+</html>
